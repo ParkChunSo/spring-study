@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public BeanDto BeanDto(){
+    public BeanDto BeanDto() {
         return new BeanDto();
     }
 }

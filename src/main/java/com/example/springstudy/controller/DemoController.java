@@ -15,16 +15,17 @@ public class DemoController {
     }
 
     @GetMapping("/user/{name}")
-    public String getUserEmail(@PathVariable String name){
+    public String getUserEmail(@PathVariable String name) {
         return demoService.getUserEmail(name);
     }
+
     @GetMapping("/users")
-    public List<UserDto> getAllUser(){
+    public List<UserDto> getAllUser() {
         return demoService.getAllUser();
     }
 
     @PostMapping("/user")
-    public void saveUser(@RequestBody UserDto body){
+    public void saveUser(@RequestBody UserDto body) {
         String name = body.getName();
         String email = body.getEmail();
         System.out.println(body.toString());

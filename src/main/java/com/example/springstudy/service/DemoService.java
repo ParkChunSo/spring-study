@@ -40,7 +40,7 @@ public class DemoService {
     public List<UserDto> getAllUser() {
         List<UserEntity> userEntity = (List<UserEntity>) demoRepository.findAll();
         List<UserDto> userDtos = new ArrayList<>();
-        for(UserEntity entity : userEntity){
+        for (UserEntity entity : userEntity) {
             UserDto userDto = new UserDto();
             userDto.setName(entity.getName());
             userDto.setEmail(entity.getEmail());
@@ -50,7 +50,7 @@ public class DemoService {
         return userDtos;
     }
 
-    public void printBean(String first, String second, String third){
+    public void printBean(String first, String second, String third) {
         System.out.println("================================================================");
         System.out.println("====================== DemoService =============================");
         System.out.println("================================================================");
@@ -60,7 +60,9 @@ public class DemoService {
         System.out.println("BeanDto.second = " + beanDto.getSecond());
         System.out.println("BeanDto.third = " + beanDto.getThird());
         System.out.println("================================================================");
-        beanDto.setFirst(first); beanDto.setSecond(second); beanDto.setThird(third);
+        beanDto.setFirst(first);
+        beanDto.setSecond(second);
+        beanDto.setThird(third);
         System.out.println("값을 넣어준 beanDto의 값");
         System.out.println("BeanDto.first = " + beanDto.getFirst());
         System.out.println("BeanDto.second = " + beanDto.getSecond());
